@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>scraping goes on</h1>
+<div class="djangtwo">
+    {% if access %}
+      <table>
+          <thead>
+          <th>HEADLINES</th>
+          </thead>
+
+          {% for acc in access %}
+           <tr>
+               <!--<form action="/InfoDelete/{{ acc.top_name }}/"></form>-->
+              <td>{{ acc.top_name }}</td>
+           </tr>
+          {% endfor %}
+      </table>
+    {% else %}
+    <p>Sorry no headlines get scrap</p>
+    {% endif %}
+</div>
+</body>
+</html>
